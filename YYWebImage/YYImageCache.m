@@ -10,22 +10,9 @@
 //
 
 #import "YYImageCache.h"
-#import "YYImage.h"
 #import "UIImage+YYWebImage.h"
-
-#if __has_include(<YYImage/YYImage.h>)
 #import <YYImage/YYImage.h>
-#else
-#import "YYImage.h"
-#endif
-
-#if __has_include(<YYCache/YYCache.h>)
 #import <YYCache/YYCache.h>
-#else
-#import "YYCache.h"
-#endif
-
-
 
 static inline dispatch_queue_t YYImageCacheIOQueue() {
     return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
